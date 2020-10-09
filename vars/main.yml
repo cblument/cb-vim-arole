@@ -1,0 +1,2 @@
+plugin_start_path: "{{ lookup('env', 'HOME') }}/.vim/pack/plugins/start"
+

@@ -1,0 +1,21 @@
+---
+- include: "{{ ansible_distribution }}/main.yml"
+
+- name: create plugin directory
+  file:
+    path: "{{ plugin_start_path }}"
+    owner: "{{ lookup('env', 'USER') }}"
+    state: directory
+
+- name: clone plugins
+  git:
+    repo: "{{ item.repo }}"
+    dest: "{{ plugin_start_path }}/{{ item.name }}"
+  loop:
+    - { name: "vim-surround", repo: "git@github.com:tpope/vim-surround.git" }
+    - { name: "ansible-vim", repo: "git@github.com:pearofducks/ansible-vim.git" }
+    - { name: "ctrlp", repo: "https://github.com/ctrlpvim/ctrlp.vim" }
+    - { name: "nerdtree", repo: "git@github.com:preservim/nerdtree.git" }
+    - { name: "vim-airline", repo: "https://github.com/vim-airline/vim-airline" }
+    - { name: "utilsnips", repo: "git@github.com:SirVer/ultisnips.git" }
+    - { name: "ansible-snippets", repo: "git@github.com:phenomenes/ansible-snippets.git" }
