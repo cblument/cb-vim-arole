@@ -19,3 +19,4 @@
     - { name: "vim-airline", repo: "https://github.com/vim-airline/vim-airline" }
     - { name: "utilsnips", repo: "git@github.com:SirVer/ultisnips.git" }
     - { name: "ansible-snippets", repo: "git@github.com:phenomenes/ansible-snippets.git" }
+    - { name: "tabular", repo: "git@github.com:godlygeek/tabular.git" }
