@@ -20,3 +20,8 @@
     - { name: "utilsnips", repo: "git@github.com:SirVer/ultisnips.git" }
     - { name: "ansible-snippets", repo: "git@github.com:phenomenes/ansible-snippets.git" }
     - { name: "tabular", repo: "git@github.com:godlygeek/tabular.git" }
+
+- name: copy vimrc
+  copy:
+    dest: "{{ ansible_env['HOME'] }}/.vimrc"
+    src: vimrc
