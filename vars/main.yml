@@ -1,2 +1,2 @@
-plugin_start_path: "{{ lookup('env', 'HOME') }}/.vim/pack/plugins/start"
+plugin_start_path: "{{ ansible_user_dir }}/.vim/pack/plugins/start"
 

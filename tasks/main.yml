@@ -4,7 +4,7 @@
 - name: create plugin directory
   file:
     path: "{{ plugin_start_path }}"
-    owner: "{{ lookup('env', 'USER') }}"
+    owner: "{{ ansible_user_id }}"
     state: directory
 
 - name: clone plugins
